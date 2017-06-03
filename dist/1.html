@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			input {
+				border: 1px solid #aaa;
+				border-radius: 4px;
+				padding: 6px 12px;
+				box-shadow: 0 0 6px #aaa;
+				outline: none;
+				transition: all .5s linear;
+			}
+			.focus {
+				box-shadow: 0 0 6px #abf;
+				border: 1px solid #abf;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" id="uname">
+
+		<script>
+			uname.onfocus = function(){
+				//this.style.boxShadow = '0 0 6px #abf';
+				//this.style.border = '1px solid #abf';
+				this.className = 'focus';
+			}
+			uname.onblur = function(){
+				this.className = '';
+			}
+		</script>
+	</body>
+</html>
